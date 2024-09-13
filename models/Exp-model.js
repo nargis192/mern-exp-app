@@ -13,6 +13,11 @@ const expschema = new mongoose.Schema({
     amount: {
         type: Number,
         required: true // Corrected 'require' to 'required'
+    },
+    users :
+    {
+        type: mongoose.Types.ObjectId, 
+        ref: 'Users'
     }
 });
 
