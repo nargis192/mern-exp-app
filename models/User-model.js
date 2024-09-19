@@ -25,13 +25,6 @@ const Userschema = new mongoose.Schema(
         Confirmpassword: {
             type: String,
         },
-        Exp:
-        [
-        {
-            type: mongoose.Types.ObjectId, 
-            ref: 'Exp'
-        }
-        ]
 
     }
 )

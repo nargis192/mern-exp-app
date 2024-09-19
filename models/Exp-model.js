@@ -2,6 +2,12 @@ const mongoose = require('mongoose');
 
 // Define the schema for the "exp" model
 const expschema = new mongoose.Schema({
+    userid: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Users',
+        required: true // Add this line
+      },
+
     topic:{
         type:String,
         required: true 
@@ -13,12 +19,8 @@ const expschema = new mongoose.Schema({
     amount: {
         type: Number,
         required: true // Corrected 'require' to 'required'
-    },
-    users :
-    {
-        type: mongoose.Types.ObjectId, 
-        ref: 'Users'
     }
+  
 });
 
 // Export the model based on the schema
